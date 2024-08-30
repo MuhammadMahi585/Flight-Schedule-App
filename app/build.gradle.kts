@@ -93,4 +93,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.savedstate)
     implementation(libs.androidx.lifecycle.runtime.ktx) // Lifecycle runtime for coroutines
 
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+
+
 }

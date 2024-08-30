@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material.icons.Icons
@@ -31,12 +32,16 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.flightsearchapp.R
 import com.example.flightsearchapp.ui.theme.FlightSearchAppTheme
 import com.example.flightsearchapp.ui.theme.primaryDark
 
 @Composable
-fun MainScreen(){
+fun MainScreen(
+    viewModel:FlightSearchViewModel= viewModel(factory = FlightSearchViewModel.factory)
+){
     var name by rememberSaveable {
         mutableStateOf("")
     }
@@ -88,6 +93,5 @@ fun SearchTopAppBar(title:String,modifier: Modifier,
 @Composable
 fun ViewScreen(){
     FlightSearchAppTheme {
-       MainScreen()
     }
 }

@@ -11,7 +11,7 @@ data class airport(
     val id:Int,
     val name:String,
     val iata_code:String,
-    val passengers:String
+    val passengers:Int
 )
 
 //favorite Entity
